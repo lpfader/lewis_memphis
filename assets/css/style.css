@@ -1,0 +1,81 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* GLOBAL BACKGROUND */
+body {
+  font-family: Arial, sans-serif;
+  background: url("/images/memphis-background.png") center top no-repeat fixed;
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+/* FIXED MEMPHIS SIDE BANNERS */
+.memphis-left,
+.memphis-right {
+  position: fixed;
+  top: 0;
+  width: 200px;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: repeat-y;
+  z-index: 1;
+}
+
+.memphis-left {
+  left: 0;
+  background-image: url("/images/memphis-left.jpg");
+}
+
+.memphis-right {
+  right: 0;
+  background-image: url("/images/memphis-right.png");
+}
+
+/* MAIN CONTENT CONTAINER */
+.resume-container {
+  width: 750px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(2px);
+  padding: 60px;
+  margin: 0 220px; /* keeps content away from banners */
+  z-index: 2;
+  position: relative;
+  border-radius: 12px;
+  box-shadow: 0 0 40px rgba(0,0,0,0.08);
+}
+
+/* HEADER */
+.resume-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.sun-logo {
+  width: 140px;
+  margin-bottom: 20px;
+}
+
+/* SECTION HEADINGS */
+.resume-section {
+  margin-bottom: 40px;
+}
+
+.resume-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #ff3ea5; /* Memphis pink */
+  font-weight: bold;
+}
+
+/* LISTS */
+.resume-section ul {
+  margin-left: 20px;
+  line-height: 1.6;
+}
