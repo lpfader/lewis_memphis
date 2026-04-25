@@ -43,10 +43,23 @@ body {
   align-items: center;            /* vertical alignment */
   margin-bottom: 60px;            /* more breathing room */
 }
+.memphis-banner-1 {
+  animation: slidePattern 10s linear infinite;
+}
+.memphis-banner-1 {
+  box-shadow: 0 2px 8px rgba(255, 62, 165, 0.3);
+}
 
 .sun-header {
   width: 120px;       /* adjust size as needed */
   margin-left: 20px;  /* small buffer from the text */
+}
+.memphis-banner-1 {
+  width: 100%;
+  height: 20px;
+  margin: 20px 0 35px;
+  background: url("images/memphis-banner-1") repeat-x center;
+  background-size: contain;
 }
 
 /* MAIN CONTENT CONTAINER */
