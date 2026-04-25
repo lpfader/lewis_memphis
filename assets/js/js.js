@@ -1,3 +1,4 @@
+console.log("Shapes found:", document.querySelectorAll('.memphis-float').length);
 console.log("JS is loading!");
 document.querySelectorAll('.memphis-float').forEach(shape => {
   const speed = 0.3 + Math.random() * 0.4;
