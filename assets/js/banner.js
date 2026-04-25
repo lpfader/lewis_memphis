@@ -9,4 +9,6 @@ window.addEventListener('scroll', () => {
 
   // Optional: add a slight hue shift for extra Memphis flair
   banner.style.filter = `hue-rotate(${scrollY / 5}deg)`;
+  console.log("banner.js loaded");
+
 });
