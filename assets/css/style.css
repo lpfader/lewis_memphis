@@ -8,7 +8,7 @@
 /* GLOBAL BACKGROUND */
 body {
   font-family: Arial, sans-serif;
-  background: url("/images/memphis-background.png") center top no-repeat fixed;
+  background: url("../images/memphis-background.png") center top no-repeat fixed;
   background-size: cover;
   min-height: 100vh;
   position: relative;
@@ -30,12 +30,12 @@ body {
 
 .memphis-left {
   left: 0;
-  background-image: url("/images/memphis-left.jpg");
+  background-image: url("../images/memphis-left.jpg");
 }
 
 .memphis-right {
   right: 0;
-  background-image: url("/images/memphis-right.png");
+  background-image: url("../images/memphis-right.png");
 }
 
 /* MAIN CONTENT CONTAINER */
