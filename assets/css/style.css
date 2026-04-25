@@ -1,22 +1,53 @@
-/* RESET */
+/* --------------------------------------------------
+   RESET
+-------------------------------------------------- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* GLOBAL BACKGROUND */
+/* --------------------------------------------------
+   GLOBAL BODY
+-------------------------------------------------- */
 body {
-  font-family: Arial, sans-serif;
-  background: url("../images/memphis-background.png") center top no-repeat fixed;
-  background-size: cover;
-  min-height: 100vh;
-  position: relative;
-  display: flex;
-  justify-content: center;
+  background: none;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.9;
 }
 
-/* FIXED MEMPHIS SIDE BANNERS */
+/* --------------------------------------------------
+   BACKGROUND WRAPPER (NO BACKGROUND IMAGE)
+-------------------------------------------------- */
+.background-wrapper {
+  padding-left: 12px;
+  padding-right: 12px;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+/* --------------------------------------------------
+   FLOATING MEMPHIS SHAPES (JS ANIMATED)
+-------------------------------------------------- */
+.memphis-float {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  opacity: 0.25;
+  z-index: 0;
+  background-size: cover;
+  pointer-events: none;
+}
+
+.shape1 { background-image: url("../images/memphis-float-shape1.png"); }
+.shape2 { background-image: url("../images/memphis-float-shape2.png"); }
+.shape3 { background-image: url("../images/memphis-float-shape3.png"); }
+
+/* --------------------------------------------------
+   FIXED SIDE BANNERS
+-------------------------------------------------- */
 .memphis-left,
 .memphis-right {
   position: fixed;
@@ -25,7 +56,7 @@ body {
   height: 100vh;
   background-size: cover;
   background-repeat: repeat-y;
-  z-index: 1;
+  z-index: 10;
 }
 
 .memphis-left {
@@ -37,100 +68,87 @@ body {
   right: 0;
   background-image: url("../images/memphis-right.png");
 }
+
+/* --------------------------------------------------
+   MAIN CONTENT CONTAINER
+-------------------------------------------------- */
+.resume-container {
+  width: 750px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(2px);
+  padding: 60px;
+  margin: 0 auto;
+  z-index: 20;
+  position: relative;
+  border-radius: 12px;
+  box-shadow: 0 0 40px rgba(0,0,0,0.08);
+}
+
+/* --------------------------------------------------
+   HEADER
+-------------------------------------------------- */
 .resume-header {
   display: flex;
-  justify-content: space-between; /* pushes name left, sun right */
-  align-items: center;            /* vertical alignment */
-  margin-bottom: 60px;            /* more breathing room */
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+  text-align: center;
 }
+
+.sun-header {
+  width: 120px;
+  margin-left: 20px;
+}
+
+/* --------------------------------------------------
+   MEMPHIS BANNER (STATIC)
+-------------------------------------------------- */
 .memphis-banner {
   width: 100%;
   height: 20px;
   margin: 20px 0 35px;
   background: url("../images/memphis-banner.png") repeat-x center;
   background-size: auto 100%;
-  animation: slidePattern 10s linear infinite;
   box-shadow: 0 2px 8px rgba(255, 62, 165, 0.3);
 }
 
-.sun-header {
-  width: 120px;       /* adjust size as needed */
-  margin-left: 20px;  /* small buffer from the text */
-}
-/* MAIN CONTENT CONTAINER */
-.resume-container {
-  width: 750px;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(2px);
-  padding: 60px;
-  margin: 0 220px; /* keeps content away from banners */
-  z-index: 2;
-  position: relative;
-  border-radius: 12px;
-  box-shadow: 0 0 40px rgba(0,0,0,0.08);
-}
-
-/* HEADER */
-.resume-header {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.sun-logo {
-  width: 140px;
-  margin-bottom: 20px;
-}
-
-/* SECTION HEADINGS */
+/* --------------------------------------------------
+   SECTION HEADINGS
+-------------------------------------------------- */
 .resume-section {
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 .resume-section h2 {
   font-size: 1.8rem;
   margin-bottom: 20px;
-  color: #ff3ea5; /* Memphis pink */
+  color: #ff3ea5;
   font-weight: bold;
 }
 
-/* LISTS */
+/* --------------------------------------------------
+   LISTS
+-------------------------------------------------- */
 .resume-section ul {
   margin-left: 20px;
   line-height: 1.6;
 }
-/* FONTS */
-body {
-  font-family: 'Fredoka', sans-serif;
-  font-size: 1.05rem;
-  line-height: 1.9;
-}
+
+/* --------------------------------------------------
+   TYPOGRAPHY
+-------------------------------------------------- */
 h1, h2, h3 {
   font-family: 'Kanit', sans-serif;
   font-weight: 600;
   letter-spacing: 0.5px;
 }
+
 h1 {
   font-size: 2.4rem;
+  margin-bottom: 25px;
 }
 
 h2 {
   font-size: 1.8rem;
   margin-top: 40px;
 }
-/* More breathing room around the header */
-.resume-header {
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-/* More spacing between sections */
-.resume-section {
-  margin-bottom: 50px;
-}
-
-/* More spacing under H1 */
-h1 {
-  margin-bottom: 25px;
-}
-
-
