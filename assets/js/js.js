@@ -9,12 +9,12 @@ const speed = 0.2 + Math.random() * 1.2;
   const x = 200 + Math.random() * (window.innerWidth - 400);
   shape.style.left = `${x}px`;
 
-let y = Math.random() * window.innerHeight * (Math.random() * 3);
+let y = Math.random() * window.innerHeight;
 
 
   function float() {
     y += speed;
-    if (y > window.innerHeight) y = -100 - Math.random() * 300;
+    if (y > window.innerHeight) y = -50 - Math.random() * 150;
     shape.style.transform = `translateY(${y}px)`;
     requestAnimationFrame(float);
   }
