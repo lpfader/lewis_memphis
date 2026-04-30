@@ -33,9 +33,8 @@ body {
 -------------------------------------------------- */
 .memphis-float {
   position: fixed;
-  width: 70px;
-  height: 70px;
-  opacity: 0.35;
+  width: 90px;
+  opacity: 0.25;
   z-index: 45;
   background-size: cover;
   pointer-events: none;
