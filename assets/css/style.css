@@ -34,9 +34,12 @@ body {
 .memphis-float {
   position: fixed;
   width: 90px;
+  aspect-ratio: 1;              /* an empty div has no height without this */
   opacity: 0.25;
-  z-index: 45;
-  background-size: cover;
+  z-index: 45;                  /* drifts over everything, résumé included */
+  background-size: contain;     /* show the whole shape, not a crop */
+  background-repeat: no-repeat;
+  background-position: center;
   pointer-events: none;
 }
 
@@ -81,7 +84,8 @@ body {
    MAIN CONTENT CONTAINER
 -------------------------------------------------- */
 .resume-container {
-  width: 750px;
+  width: 100%;
+  max-width: 750px;
   background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(2px);
   padding: 60px;
@@ -164,4 +168,38 @@ h2 {
 li {
   margin-left: 15px;
   line-height: 1.8;
+}
+
+/* --------------------------------------------------
+   SMALLER SCREENS
+   The banners take 400px and the résumé 750px, so below
+   ~1180px they would crowd the text: drop the decoration.
+-------------------------------------------------- */
+@media (max-width: 1180px) {
+  .memphis-left,
+  .memphis-right,
+  .memphis-float {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .background-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .resume-container {
+    padding: 32px 20px;
+    border-radius: 0;
+  }
+
+  h1 {
+    font-size: 1.9rem;
+  }
+
+  .resume-section h2,
+  h2 {
+    font-size: 1.5rem;
+  }
 }
